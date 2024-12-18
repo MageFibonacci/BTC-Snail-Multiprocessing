@@ -19,7 +19,11 @@ Run the program using the following syntax:
 
 
 ```bash
-python script.py -p unsolved.txt -n 1000000 --start 0x40000000000000000 --end 0x6ffffffffffffffff
+python snailmulti_keyrange.py -p unsolved.txt -n 1000000 --start 0x40000000000000000 --end 0x6ffffffffffffffff
+```
+or
+```bash
+python snailmulti.py -p unsolved.txt -n 1000000
 ```
 
 ### Arguments
@@ -32,10 +36,13 @@ python script.py -p unsolved.txt -n 1000000 --start 0x40000000000000000 --end 0x
 ### Example
 
 To search in the range `0x40000000000000000` to `0x6FFFFFFFFFFFFFFFF`:
-
-python script.py -p unsolved.txt -n 1000000 --start 0x40000000000000000 --end 0x6ffffffffffffffff
-
-
+```bash
+python snailmulti_keyrange.py -p unsolved.txt -n 1000000 --start 0x40000000000000000 --end 0x6ffffffffffffffff
+```
+To search for multi addresses based on the entire key range of the specified bits within the unsolved file:
+```bash
+python snailmulti.py -p unsolved.txt -n 1000000
+```
 ### Input File Format
 
 The `unsolved.txt` file should list puzzles in the following format:
